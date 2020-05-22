@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Cadastro de {{this.data}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form>
+
+    <div *ngIf="usuario">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="floating">UID<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nome <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Sobrenome <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Empresa</ion-label>
+        <ion-select value="empresa" okText="OK" cancelText="Cancelar">
+          <ion-select-option value="A">A</ion-select-option>
+          <ion-select-option value="B">B</ion-select-option>
+          <ion-select-option value="C">C</ion-select-option>
+          <ion-select-option value="D">D</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Endereco</ion-label>
+        <ion-input placeholder="Endereco1"></ion-input>
+        <ion-input placeholder="Endereco2"></ion-input>
+        <ion-input placeholder="Regiao"></ion-input>
+        <ion-input placeholder="Provincia"></ion-input>
+        <ion-input placeholder="Codigo Postal"></ion-input>
+      </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngIf="empresas">
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+          <ion-label position="stacked">Razao Social <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Endereco</ion-label>
+          <ion-input placeholder="Endereco1"></ion-input>
+          <ion-input placeholder="Endereco2"></ion-input>
+          <ion-input placeholder="Regiao"></ion-input>
+          <ion-input placeholder="Provincia"></ion-input>
+          <ion-input placeholder="Codigo Postal"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngIf="funcionarios">
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+          <ion-label position="stacked">Nome <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Sobrenome <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Empresa</ion-label>
+          <ion-select value="empresa" okText="OK" cancelText="Cancelar">
+            <ion-select-option value="A">A</ion-select-option>
+            <ion-select-option value="B">B</ion-select-option>
+            <ion-select-option value="C">C</ion-select-option>
+            <ion-select-option value="D">D</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Cargo</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Endereco</ion-label>
+          <ion-input placeholder="Endereco1"></ion-input>
+          <ion-input placeholder="Endereco2"></ion-input>
+          <ion-input placeholder="Regiao"></ion-input>
+          <ion-input placeholder="Provincia"></ion-input>
+          <ion-input placeholder="Codigo Postal"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">Criar conta</ion-button>
+    </div>
+  </form>
+
+
+</ion-content>

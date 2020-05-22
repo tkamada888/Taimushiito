@@ -1,0 +1,8 @@
+{
+  "name": "taimushiito",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
